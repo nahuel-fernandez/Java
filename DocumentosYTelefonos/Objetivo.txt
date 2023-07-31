@@ -1,0 +1,11 @@
+Crear un programa que posea una clase paramétrica. Esta clase ayudará al proyecto a
+mapear los datos de varias tablas en la base de datos, almacenadas con clave y valor.
+Algunas de las claves son números enteros grandes, cadenas de caracteres, y otros.
+Tablas del sistema:
+	- Documentos (Tipo cadena, descripción cadena).
+	- Teléfonos (Código número, País cadena).
+	
+Solicitar por consola una serie de documentos con su descripción e indicar si están o no
+repetidos hasta que el usuario indique que no desea seguir agregando elementos, después debe mostrar todos los elementos de la colección.
+
+Crear una colección ordenada no repetida de teléfonos por código.

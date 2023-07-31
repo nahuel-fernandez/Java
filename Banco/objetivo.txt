@@ -1,0 +1,53 @@
+Almacenar los productos de una entidad bancaria (CA, CC y TC), con las siguientes condiciones:
+
+1. Las CA y CC poseen Banco, Sucursal, Número de Producto.
+
+2. Las Tarjetas de Crédito poseen Banco, Sucursal, Número de Producto y Clave de Seguridad.
+
+3. El número de producto se genera automáticamente e incrementa de uno en uno por producto.
+
+4. El número de producto no se puede pedir por el constructor.
+
+5. Hacer un método que genere un formato para cada uno de los números de productos y reciba la estructura que debe imprimir:
+   		CC y CA (###-#-#####/#) y TC (#### #### #### ####).
+
+6. El toString debe mostrar el formato correcto.
+
+7. El Banco y la Sucursal son números enteros.
+
+8. El método que genera el número de producto debe ser único en todo el programa.
+
+9. La clase Producto no se debe instanciar.
+
+10. Las listas de productos disponibles, no disponibles y los códigos de errores deben ser enumerados con descripción.
+
+11. Los productos se ordenan por defecto por el banco, sucursal y número en ese orden.
+	A continuación una lista de productos disponibles y no disponibles y los códigos de errores:
+				
+			Código del producto 	Descripción del producto 	Habilitado
+				CC 						Cuenta Corriente 			Si
+				CA						Caja de Ahorro 				Si
+				PF 						Plazo Fijo 					No
+				FCI 				Fondo Común de Inversión 		No
+		
+			Código Error 				Descripción Error
+				1 					Producto no disponible
+				2 					Producto no existente
+					
+12.Agregar una clase Cliente que contenga la siguiente información:
+			- tipo de documento,
+			- número de documento,
+			- descripción,
+			- fecha de nacimiento,
+			- listado de productos.
+			
+13. Crear un mapa de clientes y pedir por consola el tipo y número de documento. 
+	Si el cliente existe, mostrar la información del cliente y la lista de productos. 
+	De lo contrario, mostrar que no está en el sistema.		
+	
+14.Agregar un log que inserte, en la base de datos, los errores por el tipo de producto. La tabla debe contener la siguiente información:
+			- Id.
+			- Fecha y hora
+			- Clase afectada
+			- Producto afectado
+			- Descripción del error.	

@@ -1,0 +1,13 @@
+package daos;
+
+import entidades.Ciudad;
+
+public interface CiudadDAO {
+	public boolean insertar(Integer id, String descripcion);
+	public boolean existe(Integer id);
+	public boolean existe(String descripcion);
+	public Ciudad buscar(Integer id);
+	public Ciudad buscar(String descripcion);
+	public boolean eliminar(Integer id);
+	public boolean modificar(Integer id, String descripcion);
+}

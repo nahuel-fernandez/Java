@@ -1,0 +1,13 @@
+Crear una clase Impresora que posea las siguientes características:
+
+1. Poseer un atributo que indique la impresora a utilizar y el documento (arreglo de String) a
+   imprimir.
+
+2. No debe tener el constructor por defecto.
+
+3. Solo están permitidas las impresoras (Canon, HP, Epson, Brother y Samsung).
+
+4. Debe poseer un método Imprimir y el documento no debe estar vacío.
+
+5. Al finalizar la impresión, garantizar cerrar el recurso, por lo que se debe utilizar el
+try with resources.
