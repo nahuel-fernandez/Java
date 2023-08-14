@@ -1,15 +1,19 @@
 package dtos;
 
-import daos.PaisDAO;
+import daos.LocacionDAO;
+import entidades.Locacion;
 import entidades.Pais;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.List;
 
 import conexionesDB.AdministradorDeConexiones;
 
-public class PaisDTO implements PaisDAO{
+
+//Clase que implementa la interface PaisDAO
+public class PaisDTO implements LocacionDAO{
 	private static Connection conn;
 	
 	public PaisDTO(){
@@ -22,12 +26,13 @@ public class PaisDTO implements PaisDAO{
 	};
 	
 	@Override
-	public boolean insertar(Pais pais){
+	public boolean insertar(Locacion pais){
 		try {
 			String sql = "insert into paises (descripcion) values(?)";
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, pais.getDescripcion());
 			ps.executeUpdate();
+			System.out.println("El pais \" " + pais.getDescripcion() + "\" fue agregado a la base de datos.");
 			return true;
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
@@ -37,7 +42,7 @@ public class PaisDTO implements PaisDAO{
 	}
 
 	@Override
-	public boolean existe(Pais pais) {
+	public boolean existe(String descripcion) {
 		String sql = "select * from paises";
 		boolean ok = false;
 		try {
@@ -45,7 +50,7 @@ public class PaisDTO implements PaisDAO{
 			ResultSet rs = ps.executeQuery();
 			rs.first();
 			while(rs.next()){
-				ok = rs.getString("descripcion").equalsIgnoreCase(pais.getDescripcion());
+				ok = rs.getString("descripcion").equalsIgnoreCase(descripcion);
 				if(ok) break;
 			}
 		}catch(Exception e) {
@@ -56,7 +61,7 @@ public class PaisDTO implements PaisDAO{
 	}
 
 	@Override
-	public Pais buscar(Pais pais) {
+	public Pais buscar(Locacion pais) {
 		try {
 			String sql = "select * from paises where descripcion like %" + pais.getDescripcion() + "%";
 			PreparedStatement ps = conn.prepareStatement(sql);
@@ -68,7 +73,7 @@ public class PaisDTO implements PaisDAO{
 			}else {
 				System.out.println("No existe ningun pais con la descripcion \"" + pais.getDescripcion() + "\" en la base de datos.");
 			}
-			return pais;
+			return (Pais) pais;
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
@@ -77,7 +82,7 @@ public class PaisDTO implements PaisDAO{
 	}
 
 	@Override
-	public boolean eliminar(Pais pais) {
+	public boolean eliminar(Locacion pais) {
 		try {
 			Pais p = buscar(pais);
 			if(!(p == null)) {	
@@ -97,8 +102,38 @@ public class PaisDTO implements PaisDAO{
 		return false;
 	}
 
+	
 	@Override
-	public boolean modificar(Pais p) {
+	public boolean insertar(Integer idpais, Locacion locacion) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean existe(Integer id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+@Override
+	public Locacion buscar(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Locacion> buscar(String descripcion, Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean eliminar(Integer id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean modificar(Integer id, String descripcion) {
 		// TODO Auto-generated method stub
 		return false;
 	}

@@ -1,7 +1,0 @@
-CREATE SCHEMA `paises_ciudades` ;
-
-DROP TABLE IF EXISTS paises_ciudades;
-CREATE TABLE IF NOT EXISTS `paises_ciudades`.`paises` (
-  `idpais` INT NOT NULL AUTO_INCREMENT,
-  `descripcion` VARCHAR(45) NULL,
-  PRIMARY KEY (`idpais`));

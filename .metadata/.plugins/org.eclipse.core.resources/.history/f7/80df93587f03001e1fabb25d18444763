@@ -1,6 +1,0 @@
-Crear un programa que posea una clase País y una clase Ciudad con las siguientes características:
-		- El país debe tener id y descripción.
-		- La ciudad debe tener id y descripción.
-
-Crear un método que busque las ciudades (para este ejercicio, solo Argentina) por la
-coincidencia de una palabra en la base de datos (MySQL o MariaDB) y las muestre en consola.

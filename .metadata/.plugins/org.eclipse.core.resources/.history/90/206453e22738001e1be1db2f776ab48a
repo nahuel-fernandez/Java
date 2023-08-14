@@ -1,0 +1,16 @@
+package daos;
+
+import java.util.List;
+
+import entidades.Ciudad; 
+
+//Interface para manejar el CRUD en la tabla de ciudades
+public interface CiudadDAO {
+	public boolean insertar(Integer idpais, Ciudad ciudad);
+	public boolean existe(Integer id);
+	public boolean existe(String descripcion);
+	public Ciudad buscar(Integer id);
+	public List<Ciudad> buscar(String descripcion, Integer idpais);
+	public boolean eliminar(Integer id);
+	public boolean modificar(Integer id, String descripcion);
+}

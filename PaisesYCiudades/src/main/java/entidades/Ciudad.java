@@ -2,58 +2,18 @@ package entidades;
 
 import java.util.Objects;
 
-public class Ciudad {
-	Integer id;
-	String descripcion;
-	
+//Clase para representar a las ciudades y su informacion
+public class Ciudad extends Locacion{
+	private static Integer idciudad = 0;
 	public Ciudad() {
 	}
 
-	public Ciudad(Integer id, String descripcion) {
-		super();
-		this.id = id;
-		this.descripcion = descripcion;
+	public Ciudad(String descripcion) {
+		super(descripcion);
+		idciudad++;
 	}
 	
-	
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
+	public Ciudad(Integer id, String descripcion){
+		super(id, descripcion);
 	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Ciudad other = (Ciudad) obj;
-		return Objects.equals(id, other.id);
-	}
-
-	@Override
-	public String toString() {
-		return "Ciudad [id=" + id + ", descripcion=" + descripcion + "]";
-	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getDescripcion() {
-		return descripcion;
-	}
-
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
-	}
-	
-	
 }
