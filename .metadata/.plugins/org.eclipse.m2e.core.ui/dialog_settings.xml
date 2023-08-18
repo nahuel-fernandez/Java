@@ -36,6 +36,7 @@
 			<item value="main"/>
 		</list>
 		<list key="artifactId">
+			<item value="InyeccionSQL"/>
 			<item value="PaisesYCiudades"/>
 			<item value="PaysesYCiudades"/>
 		</list>

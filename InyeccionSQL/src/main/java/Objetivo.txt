@@ -1,0 +1,2 @@
+En una tabla llamada "permisos" (usuario (varchar), módulo(char) y activo(boolean)),
+intentar que todos los permisos consultados devuelvan true aunque no lo posean (inyección SQL) solo usando el operador AND en SQL.
