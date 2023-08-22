@@ -1,4 +1,4 @@
-Almacenar los productos de una entidad bancaria (CA, CC y TC), con las siguientes condiciones:
+Almacenar los productos de una entidad bancaria (CA, CC, TC, PF, FCI), con las siguientes condiciones:
 
 1. Las CA y CC poseen Banco, Sucursal, Número de Producto.
 
@@ -8,7 +8,7 @@ Almacenar los productos de una entidad bancaria (CA, CC y TC), con las siguiente
 
 4. El número de producto no se puede pedir por el constructor.
 
-5. Hacer un método que genere un formato para cada uno de los números de productos y reciba la estructura que debe imprimir:
+5. Hacer un método que genere un formato para cada uno de los números de productos y según una estructura recibida que debe imprimir:
    		CC y CA (###-#-#####/#) y TC (#### #### #### ####).
 
 6. El toString debe mostrar el formato correcto.
@@ -27,12 +27,13 @@ Almacenar los productos de una entidad bancaria (CA, CC y TC), con las siguiente
 			Código del producto 	Descripción del producto 	Habilitado
 				CC 						Cuenta Corriente 			Si
 				CA						Caja de Ahorro 				Si
+				TC                      Tarjeta de Credito          Si
 				PF 						Plazo Fijo 					No
 				FCI 				Fondo Común de Inversión 		No
 		
 			Código Error 				Descripción Error
 				1 					Producto no disponible
-				2 					Producto no existente
+				2 					Producto inexistente
 					
 12.Agregar una clase Cliente que contenga la siguiente información:
 			- tipo de documento,

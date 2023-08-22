@@ -25,8 +25,6 @@
     <fullyQualifiedTypeName name="entidades.Pais"/>
     <fullyQualifiedTypeName name="dtos.CiudadDTO"/>
     <fullyQualifiedTypeName name="entidades.Ciudad"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="daos.LocacionDAO"/>
     <fullyQualifiedTypeName name="entidades.Locacion"/>
     <fullyQualifiedTypeName name="conexionesDB.Conexion"/>
@@ -34,4 +32,7 @@
     <fullyQualifiedTypeName name="java.sql.Statement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="enumerados.TipoDeDocumento"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
