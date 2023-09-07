@@ -13,6 +13,13 @@ public class Documento {
 		this.tipo = tipo;
 		this.numero = numero;
 	}
+	
+	
+    @Override
+	public String toString() {
+		return "Documento [tipo=" + tipo + "-" + tipo.getDescripcion() + ", numero=" + numero + "]";
+	}
+
 
 	public TipoDeDocumento getTipo() {
 		return tipo;

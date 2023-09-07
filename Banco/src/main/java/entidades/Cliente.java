@@ -1,23 +1,46 @@
 package entidades;
 
-import java.util.List;
+import java.util.List; 
 import java.util.Objects;
 import java.util.ArrayList;
+import java.util.Iterator;
+
+import ordenados.OrdenProducto;
+
 
 public class Cliente {
 	String nombre;
 	Documento documento;
-	String FechaDeNacimiento;
+	String fechaDeNacimiento;
 	List<Producto> productos;
 	
 	public Cliente(String nombre, Documento documento, String fechaDeNacimiento) {
 		super();
 		this.nombre = nombre;
 		this.documento = documento;
-		FechaDeNacimiento = fechaDeNacimiento;
+		this.fechaDeNacimiento = fechaDeNacimiento;
 		this.productos = new ArrayList<Producto>();
 	}
 	
+	public void cargarProducto(Producto producto) {
+		productos.add(producto);
+		productos.sort(new OrdenProducto<Producto>());
+	}
+	
+	private String mostrarProductos() {
+		Iterator<Producto> listaProd = this.productos.iterator();
+		String pr = "Productos[";
+		while(listaProd.hasNext())
+			pr += listaProd.next().toString();
+		return pr += "]";
+	}
+	
+	@Override
+	public String toString() {
+		return "Cliente [nombre=" + nombre + ", documento=" + documento + ", fechaDeNacimiento=" + fechaDeNacimiento
+				+ ", " + mostrarProductos() + "]";
+	}
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -35,11 +58,11 @@ public class Cliente {
 	}
 
 	public String getFechaDeNacimiento() {
-		return FechaDeNacimiento;
+		return fechaDeNacimiento;
 	}
 
 	public void setFechaDeNacimiento(String fechaDeNacimiento) {
-		FechaDeNacimiento = fechaDeNacimiento;
+		this.fechaDeNacimiento = fechaDeNacimiento;
 	}
 
 	public List<Producto> getProductos() {
@@ -66,8 +89,6 @@ public class Cliente {
 		Cliente other = (Cliente) obj;
 		return Objects.equals(documento, other.documento);
 	}
-	 
-	
 }
 
 
