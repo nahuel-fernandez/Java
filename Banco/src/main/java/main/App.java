@@ -21,30 +21,33 @@ public class App
 		Scanner teclado = new Scanner(System.in);
 		String tdoc;
 		Integer nrodoc;
+		
+		//Los datos de clientes y sus respectivos productos son cargados mediante hardcoding.
 		cargarClientes();
-			while(true) {
-		        System.out.print("Ingrese tipo de documento: ");
-		        tdoc = teclado.next();
-		        TipoDeDocumento tdd = buscarTDoc(tdoc);
-		        if(tdd == null) {
-		        	System.out.println("El tipo de documento ingresado no existe. Ingrese un tipo de documento valido: ");
-		        	for(TipoDeDocumento t : TipoDeDocumento.values()) {
-		        		System.out.println(t.name() + "- ");
-		        	}
-		        }
-		        else {
-		        	System.out.print("Ingrese el numero de documento: ");
-		        	nrodoc = teclado.nextInt();
-		        	Documento doc = new Documento(tdd, nrodoc);
-		        	if(!existeCliente(doc)) {
-		        		System.out.println("El cliente no existe. Intente de nuevo.");
-		        	}
-		        	else {
-		        		System.out.println(clientes.get(doc).toString());
-		        		break;
-		        	}
-		        }
-			}
+		
+		while(true) {
+	        System.out.print("Ingrese tipo de documento: ");
+	        tdoc = teclado.next();
+	        TipoDeDocumento tdd = buscarTDoc(tdoc);
+	        if(tdd == null) {
+	        	System.out.println("El tipo de documento ingresado no existe. Ingrese un tipo de documento valido: ");
+	        	for(TipoDeDocumento t : TipoDeDocumento.values()) {
+	        		System.out.println(t.name() + "- ");
+	        	}
+	        }
+	        else {
+	        	System.out.print("Ingrese el numero de documento: ");
+	        	nrodoc = teclado.nextInt();
+	        	Documento doc = new Documento(tdd, nrodoc);
+	        	if(!existeCliente(doc)) {
+	        		System.out.println("El cliente no existe. Intente de nuevo.");
+	        	}
+	        	else {
+	        		System.out.println(clientes.get(doc).toString());
+	        		break;
+	        	}
+	        }
+		}
 		teclado.close();	
     }
     private static TipoDeDocumento buscarTDoc(String tipo) {

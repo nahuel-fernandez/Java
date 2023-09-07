@@ -31,7 +31,10 @@ public class Cuenta extends Producto implements Comparable<Cuenta>{
 	
 	@Override
 	public String toString() {
-		return  this.producto.getDescripcion() + " [numero = " + this.getNumero() + ", banco = " + this.banco + ", sucursal = " + this.sucursal + "]";
+		String mensaje = "";
+		if(!(this.producto == null))
+			mensaje = this.producto.getDescripcion() + " [numero = " + this.getNumero() + ", banco = " + this.banco + ", sucursal = " + this.sucursal + "]";;
+		return  mensaje;
 	}
 	
 	

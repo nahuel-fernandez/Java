@@ -23,22 +23,31 @@ public class Cliente {
 	}
 	
 	public void cargarProducto(Producto producto) {
-		productos.add(producto);
-		productos.sort(new OrdenProducto<Producto>());
+		if(!(producto.getProducto() == null)) {
+			productos.add(producto);
+			productos.sort(new OrdenProducto<Producto>());
+		}
 	}
 	
 	private String mostrarProductos() {
-		Iterator<Producto> listaProd = this.productos.iterator();
-		String pr = "Productos[";
-		while(listaProd.hasNext())
-			pr += listaProd.next().toString();
-		return pr += "]";
+		if(!this.productos.isEmpty()) {
+			Iterator<Producto> listaProd = this.productos.iterator();
+			String pr = "Productos[";
+			while(listaProd.hasNext())
+				pr += listaProd.next().toString();
+			return pr += "]";
+		}
+		return "";
 	}
 	
 	@Override
 	public String toString() {
-		return "Cliente [nombre=" + nombre + ", documento=" + documento + ", fechaDeNacimiento=" + fechaDeNacimiento
+		String mensaje;
+		if(this.productos == null) 
+			mensaje = "Productos null.";
+		else mensaje = "Cliente [nombre=" + nombre + ", documento=" + documento + ", fechaDeNacimiento=" + fechaDeNacimiento
 				+ ", " + mostrarProductos() + "]";
+		return mensaje;
 	}
 
 	public String getNombre() {
