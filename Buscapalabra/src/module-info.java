@@ -4,5 +4,5 @@
 /**
  * 
  */
-module Impresora {
+module Buscapalabra {
 }

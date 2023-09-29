@@ -52,3 +52,7 @@ Almacenar los productos de una entidad bancaria (CA, CC, TC, PF, FCI), con las s
 			- Clase afectada
 			- Producto afectado
 			- Descripción del error.	
+			
+15-Agregar un archivo de log en la base del proyecto y guardar cada evento que se genere con la siguiente estructura:
+        *Fecha 
+        *Clase: Mensaje - Registrado en latabla logs id[ID]			

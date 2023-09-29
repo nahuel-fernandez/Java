@@ -1,0 +1,3 @@
+Pedir una palabra por consola y  dado un archivo:
+ - Buscar la palabra dentro del archivo e indicar si existe. De ser así, indicar fila y columna donde se encuentra.
+ - Encerrar entre dobles llaves angulares “<<>>” la palabra buscada y guardar el archivo.

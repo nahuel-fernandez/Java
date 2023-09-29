@@ -3,6 +3,7 @@ package main;
  
 import enumerados.TipoDeDocumento;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -17,7 +18,7 @@ public class App
 {
     private static Map<Documento, Cliente> clientes = new HashMap<Documento, Cliente>();
 	
-	public static void main( String[] args ){
+	public static void main( String[] args ) throws IOException{
 		Scanner teclado = new Scanner(System.in);
 		String tdoc;
 		Integer nrodoc;
@@ -65,7 +66,7 @@ public class App
     	clientes.put(cliente.getDocumento(), cliente);
     }
     
-    private static void cargarClientes() {
+    private static void cargarClientes() throws IOException {
     	Cliente c1 = new Cliente("ADRIÁN PLAZA PEGUEROLES", new Documento(TipoDeDocumento.DNI, 998855223), "27/03/1985");
     	if(existeCliente(c1.getDocumento())) {
     		System.out.println("El cliente con tipo de documento " + c1.getDocumento().getTipo().name() + " numero " + c1.getDocumento().getNumero() + " ya existe en la base de datos.");
@@ -92,8 +93,8 @@ public class App
     	if(existeCliente(c3.getDocumento())) {
     		System.out.println("El cliente con tipo de documento " + c3.getDocumento().getTipo().name() + " numero " + c3.getDocumento().getNumero() + " ya existe en la base de datos.");
     	}else {
-	    	c3.cargarProducto(new Cuenta(8, 9, "H"));
-	    	c3.cargarProducto(new Cuenta(11, 61, "CC"));
+	    	c3.cargarProducto(new Cuenta(8, 9, "CC"));
+	    	c3.cargarProducto(new Cuenta(11, 61, "H"));
 	    	c3.cargarProducto(new TarjetaDeCredito(9, 19, 34));
 	    	c3.cargarProducto(new Cuenta(75, 98, "CC") );
 	    	cargarCliente(c3);
@@ -172,7 +173,7 @@ public class App
 	    	c10.cargarProducto(new Cuenta(654, 33, "CC"));
 	    	c10.cargarProducto(new Cuenta(310, 63, "CA"));
 	    	c10.cargarProducto(new TarjetaDeCredito(5, 7, 76456));
-	    	c10.cargarProducto(new Cuenta(12, 39, "FCI") );
+	    	c10.cargarProducto(new Cuenta(12, 39, "CA") );
 	    	cargarCliente(c10);
     	}
     }

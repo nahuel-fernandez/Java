@@ -2,12 +2,14 @@ package entidades;
 
 
 import java.util.Date;
+import java.io.IOException;
 import java.sql.Timestamp;
 
 import dtos.LogDTO; 
 import enumerados.Errores;
 import enumerados.TipoCuenta;   
 import excepciones.TipoCuentaException;
+import utilidades.ArchivoLog;
 import utilidades.Generador;
 
 
@@ -19,7 +21,7 @@ public class Cuenta extends Producto implements Comparable<Cuenta>{
 	private static Integer numeroFCI = 0;
 	private Integer numero;
 	
-	public Cuenta(Integer banco, Integer sucursal, String tipo) {
+	public Cuenta(Integer banco, Integer sucursal, String tipo) throws IOException {
 		super (banco, sucursal);
 		try {
 			setTipo(tipo);
@@ -53,7 +55,7 @@ public class Cuenta extends Producto implements Comparable<Cuenta>{
 		return producto;
 	}
 
-	public void setTipo(String tipo) throws TipoCuentaException{
+	public void setTipo(String tipo) throws TipoCuentaException, IOException{
 		TipoCuenta t = buscarTipo(tipo);
 		boolean ok = true;
 		Errores error = null; 
@@ -73,6 +75,7 @@ public class Cuenta extends Producto implements Comparable<Cuenta>{
 			LogError log = new LogError(fechahora, this.getClass().getSimpleName(), tipo, error.getDescripcion());
 			LogDTO ldto = new LogDTO();
 			ldto.insertarLog(log);
+			ArchivoLog.cargarLog(log, this.getClass().getSimpleName(), ldto);
 			throw new TipoCuentaException (error);
 		}
 		switch(t) {

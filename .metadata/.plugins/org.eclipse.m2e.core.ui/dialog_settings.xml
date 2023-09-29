@@ -36,9 +36,8 @@
 			<item value="main"/>
 		</list>
 		<list key="artifactId">
-			<item value="InyeccionSQL"/>
-			<item value="PaisesYCiudades"/>
-			<item value="PaysesYCiudades"/>
+			<item value="BuscarPalabra"/>
+			<item value="jse-Tut-7-JavaStreams"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
