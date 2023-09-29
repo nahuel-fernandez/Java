@@ -171,7 +171,7 @@ public class App
     		System.out.println("El cliente con tipo de documento " + c10.getDocumento().getTipo().name() + " numero " + c10.getDocumento().getNumero() + " ya existe en la base de datos.");
     	}else {
 	    	c10.cargarProducto(new Cuenta(654, 33, "CC"));
-	    	c10.cargarProducto(new Cuenta(310, 63, "CA"));
+	    	c10.cargarProducto(new Cuenta(310, 63, "FCI"));
 	    	c10.cargarProducto(new TarjetaDeCredito(5, 7, 76456));
 	    	c10.cargarProducto(new Cuenta(12, 39, "CA") );
 	    	cargarCliente(c10);

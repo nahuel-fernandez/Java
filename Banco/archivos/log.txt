@@ -1,3 +1,1 @@
-Fecha: 2023-09-28 06:37:08.647 - Clase: Cuenta - Mensaje: Producto no disponible - Registrado en la tabla logs id[1]
-Fecha: 2023-09-28 06:37:09.22 - Clase: Cuenta - Mensaje: Producto no disponible - Registrado en la tabla logs id[2]
-Fecha: 2023-09-28 06:38:04.282 - Clase: Cuenta - Mensaje: Producto inexistente - Registrado en la tabla logs id[3]
+
