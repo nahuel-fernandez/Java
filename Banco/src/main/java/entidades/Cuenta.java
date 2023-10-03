@@ -1,7 +1,7 @@
 package entidades;
 
 
-import java.util.Date;
+import java.util.Date; 
 import java.io.IOException;
 import java.sql.Timestamp;
 
@@ -75,7 +75,7 @@ public class Cuenta extends Producto implements Comparable<Cuenta>{
 			LogError log = new LogError(fechahora, this.getClass().getSimpleName(), tipo, error.getDescripcion());
 			LogDTO ldto = new LogDTO();
 			ldto.insertarLog(log);
-			ArchivoLog.cargarLog(log, this.getClass().getSimpleName(), ldto);
+			ArchivoLog.cargarLog(log, this.getClass().getSimpleName(), tipo, ldto);
 			throw new TipoCuentaException (error);
 		}
 		switch(t) {

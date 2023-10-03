@@ -21,7 +21,7 @@ import entidades.LogError;
 
 public class ArchivoLog {
 	
-	public static void cargarLog(LogError log, String clase, LogDTO ldto) throws IOException {
+	public static void cargarLog(LogError log, String clase, String tipo, LogDTO ldto) throws IOException {
 		String directorio = "archivos";
 		String archivo = "log.txt";
 		String ruta = directorio + File.separator + archivo;
@@ -58,7 +58,7 @@ public class ArchivoLog {
 		}
 		
 		//Se agrega el nuevo log a la lista
-		lineas.add("Fecha: " + log.getFechaHora().toString() + " - Clase: " + clase + " - " + "Mensaje: " + log.getDescripcion() + " - Registrado en la tabla logs id[" + ldto.idLog() + "]");
+		lineas.add("Fecha: " + log.getFechaHora().toString() + " - Clase: " + clase + " (Prodcto '" + tipo + "') - Mensaje: " + log.getDescripcion() + " - Registrado en la tabla logs id[" + ldto.idLog() + "]");
 		
 		//Se procede a agregar en el archivo log.txt la lista con el nuevo log de error
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter( new File(ruta)))) {
