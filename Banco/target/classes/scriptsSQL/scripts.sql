@@ -1,4 +1,4 @@
-CREATE SCHEMA `banco` ;
+CREATE SCHEMA IF NOT EXISTS`banco` ;
 USE banco;
 
 DROP TABLE IF EXISTS error_log;
