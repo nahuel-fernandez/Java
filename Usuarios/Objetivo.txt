@@ -3,9 +3,9 @@ Crear un formulario Web que valide Usuario y Contraseña.
 La lista permitida de usuarios es estática y es:
 	
 		      Usuario                       Clave
-		user1@educacionit.com            user1.1234
-		user2@educacionit.com            user2.1235
-		user3@educacionit.com            user3.1236
+		user1@dominio.com            	  user1.1234
+		user2@dominio.com            	  user2.1235
+		user3@dominio.com            	  user3.1236
 
 	-Si el usuario valida sus credenciales de forma correcta, mostrar un HTML que indique: Credenciales correctas.
 	-De lo contrario: Credenciales incorrectas.

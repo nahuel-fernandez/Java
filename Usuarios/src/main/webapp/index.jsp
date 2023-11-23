@@ -16,28 +16,28 @@
 
 <body>
     <div>
-        <header>
-            <img src="images/editor.png" width="100" height="100" />
-        </header>
-    </div>
-
-    <div>
-        <nav>
-            <a href="index.html">Inicio</a>
-        </nav>
-    </div>
-
-    <div>
         <section>
-            <h2>Validación de usuario y clave</h2>
+            <h2>Formulario de Ingreso:</h2>
+			<%
+			Boolean credencialesCorrectas = (Boolean) request.getAttribute("credencialesCorrectas");
+		
+			if (credencialesCorrectas != null && !credencialesCorrectas) {
+			%>
+			<div>
+				<h1 style="color: red;">Credenciales Incorrectas</h1>
+			</div>
+		
+			<%
+			}
+			%>
             <div>
-                <form action="Validar" method="get">
-                    <input type="text" name="usuario" placeholder="Usuario" required="true"/>
+                <form action="Validar" method="post">
+                    <input type="text" name="correo" placeholder="usuario@dominio.ext" required="true"/>
                     <br />
-                    <input type="password" name="clave" placeholder="Clave" required="true"/>
+                    <input type="password" name="clave" placeholder="1234" required="true"/>
                     <br />
-                    <button type="reset" class="reset">Limpiar</button>
                     <button type="submit" class="submit">Enviar</button>
+                    <button type="reset" class="reset">Limpiar</button>
                 </form>
             </div>
         </section>

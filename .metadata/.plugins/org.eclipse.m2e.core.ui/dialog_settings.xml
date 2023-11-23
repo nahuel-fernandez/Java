@@ -38,6 +38,9 @@
 			<item value="main"/>
 		</list>
 		<list key="artifactId">
+			<item value="Credenciales2"/>
+			<item value="Cedenciales"/>
+			<item value="Usuarios2"/>
 			<item value="UsuariosParte1"/>
 		</list>
 		<list key="projectNameTemplate">

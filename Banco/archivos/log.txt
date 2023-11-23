@@ -1,0 +1,4 @@
+Fecha: 2023-11-13 19:51:22.568 - Clase: Cuenta (Prodcto 'H') - Mensaje: Producto inexistente - Registrado en la tabla logs id[-1]
+Fecha: 2023-11-13 19:51:27.396 - Clase: Cuenta (Prodcto 'FCI') - Mensaje: Producto no disponible - Registrado en la tabla logs id[-1]
+Fecha: 2023-11-13 19:57:02.935 - Clase: Cuenta (Prodcto 'H') - Mensaje: Producto inexistente - Registrado en la tabla logs id[1]
+Fecha: 2023-11-13 19:57:08.242 - Clase: Cuenta (Prodcto 'FCI') - Mensaje: Producto no disponible - Registrado en la tabla logs id[2]

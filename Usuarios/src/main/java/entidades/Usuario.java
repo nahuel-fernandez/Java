@@ -1,13 +1,30 @@
 package entidades;
 
 public class Usuario {
-	public String usuario;
+	private String correo;
 	private String clave;
-	
-	public Usuario(String usuario, String clave) {
+
+	public Usuario() {
 		super();
-		this.usuario = usuario;
+	}
+
+	public Usuario(String correo, String clave) {
+		super();
+		this.correo = correo;
 		this.clave = clave;
+	}
+
+	@Override
+	public String toString() {
+		return "Usuario [correo=" + correo + ", clave=" + clave + "]";
+	}
+
+	public String getCorreo() {
+		return correo;
+	}
+
+	public void setCorreo(String correo) {
+		this.correo = correo;
 	}
 
 	public String getClave() {
@@ -18,9 +35,5 @@ public class Usuario {
 		this.clave = clave;
 	}
 
-	public String getUsuario() {
-		return usuario;
-	}
-	
-	
 }
+
