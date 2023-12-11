@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="entidades.Cliente"/>
     <fullyQualifiedTypeName name="enumerados.Productos"/>
     <fullyQualifiedTypeName name="excepciones.TipoCuentaException"/>
     <fullyQualifiedTypeName name="utilidades.Generador"/>
@@ -56,8 +55,9 @@
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="entidades.Worksheet"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="dtos.UsuarioDTO"/>
     <fullyQualifiedTypeName name="entidades.Usuario"/>
-    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
-    <fullyQualifiedTypeName name="entidades.Worksheet"/>
+    <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
 </qualifiedTypeNameHistroy>

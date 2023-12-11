@@ -10,8 +10,38 @@
   	<description></description>
   	<servlet-class>servlets.Validar</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Logout</servlet-name>
+  	<display-name>Logout</display-name>
+  	<description></description>
+  	<servlet-class>servlets.Logout</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>BienvenidoServlet</servlet-name>
+  	<display-name>BienvenidoServlet</display-name>
+  	<description></description>
+  	<servlet-class>BienvenidoServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Bienvenido</servlet-name>
+  	<display-name>Bienvenido</display-name>
+  	<description></description>
+  	<servlet-class>servlets.Bienvenido</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Validar</servlet-name>
   	<url-pattern>/Validar</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Logout</servlet-name>
+  	<url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BienvenidoServlet</servlet-name>
+  	<url-pattern>/BienvenidoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Bienvenido</servlet-name>
+  	<url-pattern>/Bienvenido</url-pattern>
   </servlet-mapping>
 </web-app>

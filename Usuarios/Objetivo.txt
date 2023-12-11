@@ -11,11 +11,16 @@ La lista permitida de usuarios es estática y es:
 	-De lo contrario: Credenciales incorrectas.
 	
 
-V1.0
+v1.0
  El HTML debe ser generado desde el Backend.
 
 							
-							
-V2.0							
+v2.0							
  a. Ya no se debe validar de una lista estática sino de una base de datos.
- b. Mostrar el mensaje de Credenciales incorrectas en el mismo HTML del formulario.							
+ b. Mostrar el mensaje de Credenciales incorrectas en el mismo HTML del formulario.		
+ 
+ 
+v2.1
+a. Crear una sesión para cada usuario que ingrese con las credenciales correctas.
+b. Se debe poder cerrar la sesión creada.
+c. Si el usuario ya tiene una sesión, no debe poder entrar al login y será redirigido al panel de bienvenida.					

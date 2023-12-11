@@ -6,6 +6,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\monis\OneDrive\Nahuel\Java\Personal\SesionesUsuarios\src\main\webapp\index.jsp"/>
 			<item value="C:\Users\monis\OneDrive\Nahuel\Java\Personal\Usuarios\Objetivo.txt"/>
 			<item value="C:\Users\monis\OneDrive\Nahuel\Java\Descargas\Java Standard 11 Web Programming\Material para trabajar\Ejemplos\Modulo 8 - JavaEE\src\main\java\com\educacionIT\javase\principal\Principal.java"/>
 			<item value="C:\Users\monis\OneDrive\Nahuel\Java\Descargas\Java Standard 11 Web Programming\Proyectos terminados\Modulo 6 - Desafío03 - InyeccionSQL"/>
@@ -38,6 +39,8 @@
 			<item value="main"/>
 		</list>
 		<list key="artifactId">
+			<item value="Usuarios3"/>
+			<item value="SesionesUsuarios"/>
 			<item value="Credenciales2"/>
 			<item value="Cedenciales"/>
 			<item value="Usuarios2"/>
