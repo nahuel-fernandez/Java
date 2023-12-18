@@ -14,21 +14,21 @@
         <section>
             <h2>Formulario de Ingreso:</h2>
 			<%
-				Usuario usuario = (Usuario) session.getAttribute("usuario");
-				if(usuario != null){
-					request.setAttribute("usuario", usuario);
+				if(session.getAttribute("usuario")!=null){
+					session.removeAttribute("error");
 					response.sendRedirect("bienvenido.jsp");
 				}
-				Boolean credencialesCorrectas = (Boolean) request.getSession().getAttribute("credencialesCorrectas");
-				if (credencialesCorrectas != null && !credencialesCorrectas) {
-			%>
+				String error = (String) session.getAttribute("error");
+				if(error != null){
+					%>
 						<div>
-							<h1 style="color: red;">Credenciales Incorrectas</h1>
-						</div>
-			<%}
-			
+							<h1 style="color: red"> <%= error %></h1>
+						</div>	
+				   <%
+				}
 			%>
-            <div>
+			
+			<div>
                 <form action="Validar" method="post">
                     <input type="text" name="correo" placeholder="usuario@dominio.ext" required="true"/>
                     <br />

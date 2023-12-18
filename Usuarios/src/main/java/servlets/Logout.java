@@ -1,10 +1,16 @@
 package servlets;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import entidades.Usuario;
 
 /**
  * Servlet implementation class Logout
@@ -17,7 +23,6 @@ public class Logout extends HttpServlet {
      */
     public Logout() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -34,8 +39,15 @@ public class Logout extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getSession().removeAttribute("usuario");
-		request.getSession().invalidate();
+		HttpSession session = request.getSession();
+		Map<String, Usuario> usuariosLogueados = (HashMap) session.getAttribute("usuariosLogueados");
+		Usuario usuario = (Usuario) session.getAttribute("usuario");
+		if(usuariosLogueados != null && usuario != null) {
+			usuariosLogueados.remove(usuario.getCorreo());
+		}
+		session.removeAttribute("error");
+		session.removeAttribute("usuario");
+		session.invalidate();
 		response.sendRedirect("index.jsp");
 	}
 

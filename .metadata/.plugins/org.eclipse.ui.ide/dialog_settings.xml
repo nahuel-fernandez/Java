@@ -16,6 +16,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\monis\OneDrive\Nahuel\Java\Descargas\Java Standard 11 Web Programming\Material para trabajar\Ejemplos\Modulo 10 - ProgramacionFuncional"/>
+			<item value="C:\Users\monis\OneDrive\Nahuel\Java\Descargas\Java Standard 11 Web Programming\Proyectos terminados\Modulo 9 - Formulario web parte 4"/>
 			<item value="C:\Users\monis\OneDrive\Nahuel\Java\Descargas\Java Standard 11 Web Programming\Proyectos terminados\Modulo 9 - Formulario web parte 3"/>
 			<item value="C:\Users\monis\OneDrive\Nahuel\Java\Descargas\Java Standard 11 Web Programming\Material para trabajar\Ejemplos\Modulo 9 - Sesiones"/>
 			<item value="C:\Users\monis\OneDrive\Nahuel\Java\Descargas\Desde github\Java-main\Usuarios"/>
